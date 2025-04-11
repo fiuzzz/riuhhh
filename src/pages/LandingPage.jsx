@@ -29,7 +29,7 @@ const LandingPage = () => {
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav" className="justify-content-end">
           <Nav>
-            <Nav.Link href="#pendaftaran">
+            <Nav.Link href="/form_registrasi">
               <Button variant="outline-warning" className="fw-bold">
                 Pendaftaran
               </Button>
@@ -72,9 +72,6 @@ const LandingPage = () => {
                     ][idx]
                   }
                 </p>
-                <Button variant="light" size="lg" className="fw-bold shadow">
-                  {["Mulai Sekarang", "Coba Sekarang", "Daftar Sekarang"][idx]}
-                </Button>
               </Carousel.Caption>
             </Carousel.Item>
           ))}
