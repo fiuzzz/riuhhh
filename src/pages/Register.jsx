@@ -26,7 +26,7 @@ function Register() {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/v1/register",
+        "https://prayata.rikpetik.site/api/v1/register",
         formData
       );
 

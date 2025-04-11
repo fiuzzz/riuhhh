@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom"; // ✅ Tambah ini
+import { useNavigate } from "react-router-dom";
 import "./FormRegristrasi.css";
 import Layout from "./layout/Layout";
 
 const FormRegristrasi = () => {
-  const navigate = useNavigate(); // ✅ Inisialisasi navigate
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     nama_pendaftar: "",
@@ -60,13 +60,13 @@ const FormRegristrasi = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/v1/pendaftar/add",
+        "https://prayata.rikpetik.site/api/v1/pendaftar/add",
         formData
       );
 
       if (response.status === 201) {
         alert("Registrasi berhasil!");
-        navigate("/data_pendaftar"); // ✅ Redirect setelah berhasil
+        navigate("/data_pendaftar");
       }
     } catch (error) {
       const msg =

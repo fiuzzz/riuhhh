@@ -23,7 +23,9 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api/v1/pendaftar");
+        const res = await axios.get(
+          "https://prayata.rikpetik.site/api/v1/pendaftar"
+        );
         const data = res.data.data;
 
         setDataPendaftar(data);

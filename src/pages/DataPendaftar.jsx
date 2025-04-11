@@ -12,7 +12,9 @@ const DataPendaftar = () => {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/api/v1/pendaftar");
+      const res = await axios.get(
+        "https://prayata.rikpetik.site/api/v1/pendaftar"
+      );
       if (res.status === 200) {
         setData(res.data.data);
       }
@@ -35,7 +37,7 @@ const DataPendaftar = () => {
 
     try {
       const res = await axios.delete(
-        `http://localhost:3000/api/v1/pendaftar/delete/${id}`
+        `https://prayata.rikpetik.site/api/v1/pendaftar/delete/${id}`
       );
       if (res.data.status === 200) {
         fetchData();

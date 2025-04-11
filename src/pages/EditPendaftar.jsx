@@ -27,7 +27,7 @@ const EditPendaftar = () => {
     const fetchData = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:3000/api/v1/pendaftar/${id}`
+          `https://prayata.rikpetik.site/api/v1/pendaftar/${id}`
         );
         if (res.data?.data) {
           setFormData(res.data.data);
@@ -110,7 +110,7 @@ const EditPendaftar = () => {
 
     try {
       const res = await axios.put(
-        `http://localhost:3000/api/v1/pendaftar/edit/${id}`,
+        `https://prayata.rikpetik.site/api/v1/pendaftar/edit/${id}`,
         formData
       );
 

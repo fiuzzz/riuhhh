@@ -24,16 +24,19 @@ function Login() {
     setLoading(true);
     try {
       // Make sure the request body matches exactly what the API expects
-      const response = await fetch("http://localhost:3000/api/v1/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: formData.email,
-          password: formData.password,
-        }),
-      });
+      const response = await fetch(
+        "https://prayata.rikpetik.site/api/v1/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: formData.email,
+            password: formData.password,
+          }),
+        }
+      );
       const data = await response.json();
       if (response.status === 200) {
         // Store user data according to the API response format
