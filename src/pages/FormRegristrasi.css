@@ -1,0 +1,66 @@
+.form-container {
+  max-width: 900px; /* Memperlebar container */
+  margin: 30px auto;
+  padding: 20px; /* Mengurangi padding agar formulir tidak terlalu tinggi */
+  border-radius: 10px;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Menghindari scroll */
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 15px; /* Mengurangi margin bawah */
+  color: #333;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(350px, 1fr)
+  ); /* Memperlebar kolom */
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px 14px; /* Memperbesar padding untuk input */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.error {
+  color: #dc3545;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.submit-btn {
+  background-color: #db930d;
+  color: white;
+  border: none;
+  padding: 12px 18px; /* Memperbesar padding tombol */
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #a16d0c;
+}

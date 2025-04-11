@@ -1,0 +1,89 @@
+/* Sidebar Container */
+.sidebar {
+  width: 270px;
+  height: 100vh;
+  background-color: #2c2c2c; /* Hitam/abu-abu gelap */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Judul Sidebar */
+.sidebar h5 {
+  margin-bottom: 20px;
+  font-size: 18px; /* Ukuran font lebih besar */
+  font-weight: bold; /* Tebelkan font */
+  color: #ff7700; /* Oren gelap */
+}
+
+/* List Menu */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.sidebar ul li {
+  margin-bottom: 12px;
+  color: #ff7700;
+}
+
+/* Link Menu */
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ff7700; /* Oren gelap */
+  padding: 12px;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s;
+  font-size: 16px;
+  font-weight: 600; /* Menebalkan font */
+}
+
+/* Icon Color Matching */
+.sidebar ul li a .icon {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #ff7700; /* Warna oren yang sama dengan teks */
+}
+
+/* Hover & Active State */
+.sidebar ul li a.active,
+.sidebar ul li a:hover {
+  background-color: #504f4e; /* Oren gelap */
+  color: white;
+}
+
+.sidebar ul li a.active .icon,
+.sidebar ul li a:hover .icon {
+  color: white; /* Warna ikon berubah saat hover atau aktif */
+}
+
+/* Tombol Logout */
+.logout-btn {
+  margin-top: auto;
+  width: 100%;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  border-radius: 8px;
+  background-color: #504f4e; /* Oren gelap */
+  border: none;
+  color: white;
+  transition: background 0.3s;
+  font-weight: 600; /* Menebalkan font */
+}
+
+.logout-btn .icon {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+.logout-btn:hover {
+  background-color: #cc5a00; /* Oren lebih gelap */
+}
