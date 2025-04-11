@@ -8,6 +8,7 @@ import FormRegristrasi from "./pages/FormRegristrasi";
 import DataPendaftar from "./pages/DataPendaftar";
 import EditPendaftar from "./pages/EditPendaftar";
 import LandingPage from "./pages/LandingPage";
+import FormRegristrasiUser from "./pages/FormRegisterUser";
 
 function App() {
   return (
@@ -18,6 +19,10 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/form_registrasi" element={<FormRegristrasi />} />
+          <Route
+            path="/form_registrasi_user"
+            element={<FormRegristrasiUser />}
+          />
           <Route path="/data_pendaftar" element={<DataPendaftar />} />
           <Route path="/edit_data/:id" element={<EditPendaftar />} />
           <Route path="/landingpage" element={<LandingPage />} />

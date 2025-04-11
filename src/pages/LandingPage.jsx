@@ -29,7 +29,7 @@ const LandingPage = () => {
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav" className="justify-content-end">
           <Nav>
-            <Nav.Link href="/form_registrasi">
+            <Nav.Link href="/form_registrasi_user">
               <Button variant="outline-warning" className="fw-bold">
                 Pendaftaran
               </Button>
