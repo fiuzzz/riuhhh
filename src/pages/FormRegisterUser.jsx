@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./FormRegristrasi.css";
-import Layout from "./layout/Layout";
 
 const FormRegristrasiUser = () => {
   const navigate = useNavigate();
@@ -77,125 +76,121 @@ const FormRegristrasiUser = () => {
   };
 
   return (
-    <Layout>
-      <div className="form-container m-auto mt-5">
-        {errorMessage && <p className="error">{errorMessage}</p>}
+    <div className="form-container m-auto mt-5">
+      {errorMessage && <p className="error">{errorMessage}</p>}
 
-        <form onSubmit={handleSubmit} className="form-box">
-          <h2 className="fw-bold m-auto text-center pb-3">
-            Formulir Pendaftaran
-          </h2>
-          <div className="form-grid">
-            <div className="form-group">
-              <label>Nama:</label>
-              <input
-                type="text"
-                name="nama_pendaftar"
-                value={formData.nama_pendaftar}
-                onChange={handleChange}
-                required
-              />
-              {fieldErrors.nama_pendaftar && (
-                <p className="error">{fieldErrors.nama_pendaftar}</p>
-              )}
-            </div>
-
-            <div className="form-group">
-              <label>Alamat:</label>
-              <input
-                type="text"
-                name="alamat"
-                value={formData.alamat}
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            <div className="form-group">
-              <label>Jenis Kelamin:</label>
-              <select
-                name="jenis_kelamin"
-                value={formData.jenis_kelamin}
-                onChange={handleChange}
-                required
-              >
-                <option value="">-- Pilih --</option>
-                <option value="Laki-laki">Laki-laki</option>
-                <option value="Perempuan">Perempuan</option>
-              </select>
-            </div>
-
-            <div className="form-group">
-              <label>No HP:</label>
-              <input
-                type="text"
-                name="no_hp"
-                value={formData.no_hp}
-                onChange={handleChange}
-                required
-              />
-              {fieldErrors.no_hp && (
-                <p className="error">{fieldErrors.no_hp}</p>
-              )}
-            </div>
-
-            <div className="form-group">
-              <label>Asal Sekolah:</label>
-              <input
-                type="text"
-                name="asal_sekolah"
-                value={formData.asal_sekolah}
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            <div className="form-group">
-              <label>Jurusan:</label>
-              <select
-                name="jurusan"
-                value={formData.jurusan}
-                onChange={handleChange}
-                required
-              >
-                <option value="">-- Pilih --</option>
-                <option value="PPW">PPW</option>
-                <option value="PPM">PPM</option>
-                <option value="PSJ">PSJ</option>
-              </select>
-            </div>
-
-            <div className="form-group">
-              <label>Tanggal Lahir:</label>
-              <input
-                type="date"
-                name="tgl_lahir"
-                value={formData.tgl_lahir}
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            <div className="form-group">
-              <label>NISN:</label>
-              <input
-                type="text"
-                name="NISN"
-                value={formData.NISN}
-                onChange={handleChange}
-                maxLength="10"
-                required
-              />
-              {fieldErrors.NISN && <p className="error">{fieldErrors.NISN}</p>}
-            </div>
+      <form onSubmit={handleSubmit} className="form-box">
+        <h2 className="fw-bold m-auto text-center pb-3">
+          Formulir Pendaftaran
+        </h2>
+        <div className="form-grid">
+          <div className="form-group">
+            <label>Nama:</label>
+            <input
+              type="text"
+              name="nama_pendaftar"
+              value={formData.nama_pendaftar}
+              onChange={handleChange}
+              required
+            />
+            {fieldErrors.nama_pendaftar && (
+              <p className="error">{fieldErrors.nama_pendaftar}</p>
+            )}
           </div>
 
-          <button type="submit" className="submit-btn">
-            Kirim
-          </button>
-        </form>
-      </div>
-    </Layout>
+          <div className="form-group">
+            <label>Alamat:</label>
+            <input
+              type="text"
+              name="alamat"
+              value={formData.alamat}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <label>Jenis Kelamin:</label>
+            <select
+              name="jenis_kelamin"
+              value={formData.jenis_kelamin}
+              onChange={handleChange}
+              required
+            >
+              <option value="">-- Pilih --</option>
+              <option value="Laki-laki">Laki-laki</option>
+              <option value="Perempuan">Perempuan</option>
+            </select>
+          </div>
+
+          <div className="form-group">
+            <label>No HP:</label>
+            <input
+              type="text"
+              name="no_hp"
+              value={formData.no_hp}
+              onChange={handleChange}
+              required
+            />
+            {fieldErrors.no_hp && <p className="error">{fieldErrors.no_hp}</p>}
+          </div>
+
+          <div className="form-group">
+            <label>Asal Sekolah:</label>
+            <input
+              type="text"
+              name="asal_sekolah"
+              value={formData.asal_sekolah}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <label>Jurusan:</label>
+            <select
+              name="jurusan"
+              value={formData.jurusan}
+              onChange={handleChange}
+              required
+            >
+              <option value="">-- Pilih --</option>
+              <option value="PPW">PPW</option>
+              <option value="PPM">PPM</option>
+              <option value="PSJ">PSJ</option>
+            </select>
+          </div>
+
+          <div className="form-group">
+            <label>Tanggal Lahir:</label>
+            <input
+              type="date"
+              name="tgl_lahir"
+              value={formData.tgl_lahir}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <label>NISN:</label>
+            <input
+              type="text"
+              name="NISN"
+              value={formData.NISN}
+              onChange={handleChange}
+              maxLength="10"
+              required
+            />
+            {fieldErrors.NISN && <p className="error">{fieldErrors.NISN}</p>}
+          </div>
+        </div>
+
+        <button type="submit" className="submit-btn">
+          Kirim
+        </button>
+      </form>
+    </div>
   );
 };
 
