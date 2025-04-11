@@ -42,7 +42,7 @@ function Login() {
         // Store user data according to the API response format
         localStorage.setItem("user", JSON.stringify(data.user));
         console.log("Login successful:", data);
-        navigate("/dashboard");
+        navigate("/landingpage");
       } else {
         // Show error message from API
         setError(data.message || "Login failed. Please try again.");
